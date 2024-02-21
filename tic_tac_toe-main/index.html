@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Tic Tac Toe</title>
+		<script src="script.js" defer></script>
+		<link rel="stylesheet" href="style.css" />
+	
+	</head>
+	<body>
+		<style>
+			h1 {
+				color: white;
+			}
+		</style>
+		<div class="main-container">
+			<header class="score">
+				<div class="player-score p1-info">
+					<span class="info-span players">Player1</span>
+					<span class="player-win-count">0</span>
+				</div>
+				<span class="info-span score-span">Score</span>
+				<div class="player-score p2-info">
+					<span class="info-span players">Player2</span>
+					<span class="player-win-count">0</span>
+				</div>
+			</header>
+
+			<div class="display-info">
+				<div class="game-info">
+					<div class="winner"></div>
+					<div class="game-status-buttons">
+						<button id="continue-game-button">Continue</button>
+						<button id="new-game-button">New Game</button>
+					</div>
+				</div>
+				<!--GAME INFO-->
+			</div>
+
+			<form class="players-info-container">
+				<div class="players-info">
+					<div class="player-form">
+						<label for="player1-name">Player 1 (You) Name:</label>
+						<input
+							type="text"
+							value="Player1"
+							id="p1-name"
+							maxlength="9"
+						/>
+					</div>
+					<fieldset>
+						<legend>Select the type of Player2:</legend>
+						<div class="player-type">
+							<input
+								type="radio"
+								id="p2Choice1"
+								name="p2Choice"
+								value="AI"
+								checked
+							/>
+							<label for="p2Choice1">🤖</label>
+							<input
+								type="radio"
+								id="p2Choice2"
+								name="p2Choice"
+								value="human"
+							/>
+							<label for="p2Choice2">👤</label>
+						</div>
+					</fieldset>
+					<div class="player-form">
+						<label for="player1-name">Player2 Name:</label>
+						<input
+							type="text"
+							value="AI"
+							id="p2-name"
+							maxlength="9"
+						/>
+					</div>
+					<div class="inbetween-player-forms">
+						<button type="submit" class="send-players-info">
+							Start Game
+						</button>
+					</div>
+				</div>
+			</form>
+
+			<div class="top-container">
+				<h1>Tic Tac Toe</h1>
+			</div>
+			<main class="main-game">
+				<div class="game-cell" data-value="0"></div>
+				<div class="game-cell" data-value="1"></div>
+				<div class="game-cell" data-value="2"></div>
+				<div class="game-cell" data-value="3"></div>
+				<div class="game-cell" data-value="4"></div>
+				<div class="game-cell" data-value="5"></div>
+				<div class="game-cell" data-value="6"></div>
+				<div class="game-cell" data-value="7"></div>
+				<div class="game-cell" data-value="8"></div>
+			</main>
+		</div>
+	</body>
+</html>
